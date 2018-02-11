@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.idsc.projectconference20.SuscriberActivity"
+    android:background="@color/background"
+    >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_horizontal"
+            android:keepScreenOn="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:scrollbars="horizontal">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+
+                    <FrameLayout
+                        android:id="@+id/subscriberview0"
+                        android:layout_width="90dp"
+                        android:layout_height="120dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_gravity="bottom|end"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginTop="13dp"
+                        android:background="@color/background"
+                        android:padding="2dp"
+                        android:elevation="3dp"/>
+
+                    <FrameLayout
+                        android:id="@+id/subscriberview1"
+                        android:layout_width="90dp"
+                        android:layout_height="120dp"
+                        android:layout_alignTop="@+id/subscriberview0"
+                        android:layout_gravity="bottom|end"
+                        android:layout_toEndOf="@+id/subscriberview0"
+                        android:background="@color/background"
+                        android:padding="2dp"
+                        android:layout_marginLeft="6dp"/>
+                    <FrameLayout
+                        android:id="@+id/subscriberview2"
+                        android:layout_width="90dp"
+                        android:layout_height="120dp"
+                        android:layout_alignTop="@+id/subscriberview1"
+                        android:layout_gravity="bottom|end"
+                        android:layout_toEndOf="@+id/subscriberview1"
+                        android:background="@color/background"
+                        android:padding="2dp"
+                        android:layout_marginLeft="6dp"/>
+
+                    <FrameLayout
+                        android:id="@+id/subscriberview3"
+                        android:layout_width="90dp"
+                        android:layout_height="120dp"
+                        android:layout_alignTop="@+id/subscriberview2"
+                        android:layout_gravity="bottom|end"
+                        android:layout_toEndOf="@+id/subscriberview2"
+                        android:background="@color/background"
+                        android:padding="2dp"
+                        android:layout_marginLeft="6dp"/>
+
+                    <FrameLayout
+                        android:id="@+id/subscriberview4"
+                        android:layout_width="90dp"
+                        android:layout_height="120dp"
+                        android:layout_alignTop="@+id/subscriberview3"
+                        android:layout_gravity="bottom|end"
+                        android:layout_toEndOf="@+id/subscriberview3"
+                        android:background="@color/background"
+                        android:padding="2dp"
+                        android:layout_marginLeft="6dp"/>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+
+            <RelativeLayout
+                android:id="@+id/subscriber_container"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:layout_above="@+id/relativeLayout">
+
+                <FrameLayout
+                    android:id="@+id/publisherview"
+                    android:layout_width="90dp"
+                    android:layout_height="120dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_gravity="bottom|end"
+                    android:layout_marginBottom="4dp"
+                    android:background="#FFFFFF"
+                    android:elevation="6dp"
+                    android:padding="2dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:id="@+id/relativeLayout">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <Button
+                        android:text="Swap Camera"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/swapCamera"
+                        android:layout_weight="1"
+                        android:background="@color/btn_color3"/>
+
+                    <ToggleButton
+                        android:text="Toggle Audio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/toggleAudio"
+                        android:layout_weight="1"
+                        android:textOff="@string/audio"
+                        android:textOn="@string/audio"
+                        android:checked="true"
+
+                        />
+
+                    <ToggleButton
+                        android:text="Toggle Video"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/toggleVideo"
+                        android:layout_weight="1"
+                        android:textOff="@string/video"
+                        android:textOn="@string/video"
+                        android:checked="true"
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+  <!--  <TextView
+        android:id="@+id/textview_replace"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Stream id here"
+        />-->
+    <!--
+    <FrameLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="40dp">
+
+        <FrameLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/subscriber_container_s" />
+
+         <FrameLayout
+             android:layout_width="90dp"
+             android:layout_height="120dp"
+             android:id="@+id/publisher_container"
+             android:layout_gravity="bottom|end"
+             android:layout_marginBottom="16dp"
+             android:layout_marginEnd="16dp"
+             android:layout_marginRight="16dp"
+             android:padding="2dp"
+             android:background="#FFFFFF" />&ndash;&gt;
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/swapCamera"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Swap Camera" />
+
+            <ToggleButton
+                android:id="@+id/toggleAudio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Toggle Audio"
+                android:textOff="@string/audio"
+                android:textOn="@string/audio" />
+
+            <ToggleButton
+                android:id="@+id/toggleVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="Toggle Video"
+                android:textOff="@string/video"
+                android:textOn="@string/video" />
+        </LinearLayout>
+    </RelativeLayout>
+
+-->
+
+
+
